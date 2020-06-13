@@ -14,7 +14,7 @@ let age = 24;
 //////////////////STEP 3////////////////////
 //Create a variable called 'name' and assign it a value of your name as a string.  
 
-let name = "Amanda";
+const name = "Amanda";
 
 //////////////////STEP 4////////////////////
 //Create a variable called 'phrase' that is initialized as an empty string. 
@@ -25,10 +25,9 @@ let phrase = '';
 //Create an if statement that checks to see if the lovesCode variable is equal to true. If it is, set the phrase variable created above to 'I love code', it it's not true set the phrase variable to 'I do not love to code'
 
 if (lovesCode === true) {
-   let phrase = "I love to code"; {
-    } else {
-       let phrase = "I do not love to code";
-    }
+   phrase = "I love code";
+} else {
+   phrase = "I do not love to code";
 };
 
 //////////////////Wrap Up////////////////////
