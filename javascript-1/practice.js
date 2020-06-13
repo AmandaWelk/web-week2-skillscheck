@@ -43,18 +43,19 @@ function lovesCodeChecker (x) {
 function oddChecker (num) {
 	if (!num % 2 === 0) {
 		return "the number is odd";
-	} else if (num % 2 === 0) {
+		} 
+	if (num % 2 === 0) {
 		return "the number is even";
-	}
+		}
 };
 
 //////////////////PROBLEM 7////////////////////
 
 // Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. Have the function take the two parameters and return a string that says "NAMEPARAM loves LOVEPARAM" with the appropriate parameters in the string. e.g. "Joseph loves music"
 
-//function iLove (name = 'Amanda', love = 'sports') {
-	//return `$(name) loves $(love)`;
-//};
+function iLove(name, love) {
+	return `${name} loves ${love}`;
+};
 
 
 //////////////////PROBLEM 8////////////////////
@@ -81,28 +82,31 @@ let middleNums = numbers.slice(1, 4);
 
 // Create an object called 'me' that has the following keys: firstName, state, age, and greeter. The value of the firstName key should be your name as a string. The value of the property state should be your current state or providence of residence as a string. The value of age should be your age as a number. greeter should be a method that returns the string 'Hello! My name is NAMEVALUE and I live in STATEVALUE' with the corresponding values. 
 
-//let me {
-	//firstName: "Amanda",
-	//state: "Minnesota",
-	//age: 24,
-	//greeter: 
-//}    COME BACK
+let me = {
+	firstName: 'Amanda',
+	state: 'Minnesota',
+	age: 24,
+	greeter: function () {
+		return 'Hello! My name is ' + this.firstName + ' and I live in ' + this.state;
+	}
+};
 
 //////////////////PROBLEM 12////////////////////
 
 // Create a function called 'bigOrSmall' that takes in one parameter, 'arr', which will be an array of numbers. Inside of the bigOrSmall function, create a new array called 'answers'. Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100. If it is, push 'big' as a string to the answers array. If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. Return the answers array inside of the function.
 
-//function bigOrSmall (arr) {
-	//let answers = [];
-	//for (let i = 0; i < arr.length; i++) {
-		//if (arr[i] > 100) [
-			//answers.push("big");
-		//]
-	//} else if (arr[i] <= 100) {
-		//answers.push("small");
-	//}
-	//return answers;
-//};
+function bigOrSmall (arr) {
+	let answers = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] > 100) {
+			answers.push("big");
+		}
+		if (arr[i] <= 100) {
+			answers.push("small");
+	}
+	}
+	return answers;
+};
 
 //////////////////PROBLEM 13////////////////////
 
@@ -151,7 +155,10 @@ let total = myNumbers.reduce(function(acc, curr) {
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-//let myNumbersIndex = [];
+let myNumbersIndex = [];
+myNumbers.forEach(function(num, index) {
+	myNumbersIndex.push(index);
+});
 
 
 //////////////////PROBLEM 18////////////////////
@@ -175,12 +182,14 @@ const people = [
 	{ name: 'Josh', friend: true, awesomeLevel: 7 }
 ]
 
-//code here
+let enemies = people.filter(function(arr) {
+	return arr.friend === false;
+});
 
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
-//let totallyAwesome = people.reduce(function(acc, curr) {
-	//acc += curr.awesomeLevel;
-//}, 0);
+let totallyAwesome = people.reduce(function(acc, item) {
+	return acc += item.awesomeLevel;
+}, 0);
