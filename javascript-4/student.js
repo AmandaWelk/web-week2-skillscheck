@@ -4,7 +4,7 @@
 //////////////////Step 1////////////////////
 // Create a new array called 'faveColors' and assign it a value of your three favorite colors as strings.
 
-let faveColors = ["gray", "black", "yellow"];
+let faveColors = ["gray", "navy", "purple"];
 
 //////////////////Step 2////////////////////
 // Create an object called 'me' that has these keys: firstName, superHeroName, homeTown, superPowers, superPowerXP, and profileImage. 
@@ -22,20 +22,21 @@ let faveColors = ["gray", "black", "yellow"];
 // The profileImage key value should be a method that returns this url `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`.
 
 let me = {
-    firstName = "Amanda",
-    superHeroName = "Super Savior",
-    homeTown = "some place",
-    superPowers = "flight, super-strength, invisibility",
-    superPowersXP = Math.floor(Math.random() * 100 + 1);
-    profileImage = Image.source(`https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`);
+    firstName: "Amanda",
+    superHeroName: "Super Savior",
+    homeTown: "Some Place",
+    superPowers: "flight, super-strength, invisibility",
+    superPowersXP: Math.floor(Math.random() * 100 + 1),
+    profileImage: (`https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`)
 };
+
 
 //////////////////Step 3////////////////////
 // In this step, you will create three variables that will hold some data from your me object. The first variable you create should be 'regularName', and it should receive its value from the value of your firstName key on the me object above. The next variable is 'superName' which should have its value assigned as the value of the superHeroName property on the me object. The last variable you should create is 'homeTown' which will be the value of homeTown on the me object
 
-let regularName = me[firstName];
-let superName = me[superHeroName];
-let homeTown = me[homeTown];
+let regularName = me.firstName;
+let superName = me.superHeroName;
+let homeTown = me.homeTown;
 
 //////////////////Step 4////////////////////
 //Create a function called 'setColor' that takes in one parameter called 'arr' that is an array of colors. Make sure that we only ever have three colors by using splice to trim the array to just 3 colors. 
@@ -49,7 +50,7 @@ function setColor (arr) {
             arr[i] = '#4D4DFF';
         }
     }
-    background();
+    background(gray, navy, purple);
 };
 
 //////////////////Step 5////////////////////
