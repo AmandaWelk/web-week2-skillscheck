@@ -26,8 +26,12 @@ let me = {
     superHeroName: "Super Savior",
     homeTown: "Some Place",
     superPowers: "flight, super-strength, invisibility",
-    superPowersXP: Math.floor(Math.random() * 100 + 1),
-    profileImage: (`https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`)
+    superPowersXP: function() {
+        return Math.floor(Math.random() * 100 + 1)
+    },
+    profileImage: function() {
+        return (`https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`)
+    }
 };
 
 
@@ -45,12 +49,12 @@ let homeTown = me.homeTown;
 
 function setColor (arr) {
     arr.splice(3);
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i <= arr.length; i++) {
         if (arr[i] === 'blue') {
             arr[i] = '#4D4DFF';
         }
     }
-    background(gray, navy, purple);
+    background('gray', 'navy', 'purple');
 };
 
 //////////////////Step 5////////////////////
@@ -58,9 +62,10 @@ function setColor (arr) {
 
 function setPowers (arr) {
     for (i = 0; i < arr.length; i++) {
-        createLi();
+        createLi(arr[i]);
     }
 };
+setPowers();
 
 
 //////////////////Step 6////////////////////
@@ -72,3 +77,4 @@ function redactInfo (obj) {
     }
     redacted();
 };
+
