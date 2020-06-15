@@ -1,3 +1,7 @@
+body {
+    margin: auto;
+}
+
 h1 {
     font-size: 50px;
     padding: 70px 550px;
@@ -38,9 +42,10 @@ h2 {
     background-color: aquamarine;
     display: inline-flex;
     border-radius: 25px;
+    
 }
 
-.section-two {
+#section-two {
     width: 100%;
     padding: 50px 60px;
     justify-content: space-evenly;
@@ -53,7 +58,7 @@ h2 {
     display: inline-flex;
 }
 
-.section-three {
+#section-three {
     width: 100%;
     padding: 0px 150px;
 }
@@ -62,10 +67,7 @@ h2 {
     width: 100%;
     display: inline-flex;
     padding: 10px;
-}
-
-.section-four p {
-    overflow-wrap: normal;
+    justify-content: space-between;
 }
 
 .footer {
