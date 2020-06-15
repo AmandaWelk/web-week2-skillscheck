@@ -48,7 +48,18 @@ h2 {
 #section-two {
     width: 100%;
     padding: 50px 60px;
-    justify-content: space-evenly;
+}
+
+#section-two .box3 {
+    margin-left: 150px;
+}
+
+#section-two .box2 {
+    margin-left: 150px;
+}
+
+#section-two .box1 {
+    margin-left: 200px;
 }
 
 .rectangle1 , .rectangle2 {
@@ -63,15 +74,27 @@ h2 {
     padding: 0px 150px;
 }
 
+#section-three .rectangle2 {
+    margin-left: 175px;
+}
+
 .section-four {
     width: 100%;
     display: inline-flex;
-    padding: 10px;
-    justify-content: space-between;
+    padding: 45px 0;
+}
+
+.section-four img {
+    margin-right: 300px;
+}
+
+.section-four p {
+    margin-left: 300px;
+    margin-right: 500px;
 }
 
 .footer {
     background-color: indigo;
     width: 100%;
-    height: 100px;
+    height: 125px;
 }
